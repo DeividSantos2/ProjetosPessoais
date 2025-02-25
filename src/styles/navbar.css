@@ -1,0 +1,112 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar */
+  .navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaço entre logo e menu */
+    padding: 0 20px;
+    background-color: #e27b1a;
+    position: relative;
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Imagem do Logo */
+  .logo-container img {
+    width: 50px;
+    height: auto;
+  }
+  
+  /* Texto do Logo */
+  .txtLogo {
+    margin-left: 10px;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px #000000;
+  }
+  
+  /* Menu */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* Estilo dos Itens do Menu */
+  .nav-links li {
+    cursor: pointer;
+  }
+  
+  /* Botão do Menu Hambúrguer */
+  .hamburger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  }
+  
+  /* Remove a cor azul dos links visitados */
+  .nav-links a:visited {
+    color: white;
+  }
+  
+  /* Efeito de hover para melhorar a usabilidade */
+  .nav-links a:hover {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+  }
+  
+  
+
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Esconde os links e mostra o botão hambúrguer */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #e27b1a;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    .nav-links.open {
+      display: flex;
+      border-radius: 0 0 50% 50% / 0 0 30px 60px;
+    }
+  
+    .nav-links li {
+      padding: 10px 0;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  }
+  
